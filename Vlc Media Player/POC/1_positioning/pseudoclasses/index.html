@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- at anchor tag every class are worked ,and (active , hover) class work on every tag -->
+    <style>
+        /* order same hona chahiye nahi to chize kaam krna band kar dengi 
+         short kut : -> love hit (link,visited ,hover ,active)*/
+        a:link{
+            color:blue;
+        }
+         a:visited{ /* <- atleast once you click on link
+            
+            color: brown;
+        }
+        a:hover{ /*jb hum link pr cursor le jayenge tb ye apply hoga*/
+            background-color: red;
+            font-size: 2rem;
+        }
+        a:active{ /* jbb link active karo tb ye properties active hoti hai*/
+            font-size: 2rem;
+        }
+        button{
+            height:50px;
+            padding: 20px;
+
+        }
+        button:hover{ /* <- jb hum jayenge button pr tbb ye properties apply hogi */
+            padding: 0rem;
+            height: 30px;
+            width: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Pseudo classes</h2>
+    <button>submit</button>
+    <a href="https://www.google.com/" >link</a>
+</body>
+</html>

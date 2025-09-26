@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        .parent{
+            background-color: blueviolet;
+            height: 600px;
+            width: 700px;
+            margin-left: 400px;
+            border: dashed;
+            position: static;
+
+            /* position: relative ; agar de dete hai parent ko to 
+            -> to child jaise box-1 apna top ,left parent ke border se nap ke adjust karega */
+        }
+        .box-1{
+            height: 140px; 
+            width: 150px;
+            background-color: lightcyan;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            border: dashed;
+            margin-left: 10px;
+            /* position help karti hai flow me cchedkhani karne me */
+            /* original position se move karne me help :-> you move any where but your position 
+            can not occupy by some one else*/
+            /* position: relative; */
+            /* right me move krta hai  */
+            /* left: 50px; */
+            /* bottom me move   ## also we have bottom and right
+            we can also provide -ve value ex:-10px*/
+            /* top: 100px; */
+        }
+        
+        .box-2{
+            height: 140px; 
+            width: 150px;
+            background-color: lightpink;
+            margin-left: 10px;border: dashed;
+
+            /* position absolute :-> dont occupy original position
+            it takes by some other elements
+            -->agar kucch nahi karte hai bs absolute dete hai to ye background me chala 
+            jata hai aur next element uper aa jata hai */
+            /* position: absolute; */
+            /* opacity: 0; */
+             /* left: 5%; */ /*<- page ke kone se measure karke fit hota hai left bhi top bhi */
+            /* top: 5px; */
+        }
+        
+        .box-3{
+            height: 140px; 
+            width: 150px;
+            background-color: lightgreen;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: dashed;
+            /* position: relative;
+            left: 50px;
+            top: 100px; */
+        }
+        
+        .box-4{
+            height: 140px; 
+            width: 150px;
+            background-color: lightblue;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: dashed;
+        }
+
+    </style>
+</head>
+<!-- FLOW of code execution :- Top to Bottom and Left to Right in css and Html -->
+<body>
+    <h2> Position - Absolute , Relative</h2>
+    <div class="parent">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <span>i am span</span>
+        <span>i am span</span>
+        <span>i am span</span>
+        <p>Lorem <span>hello</span></p>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+/* by default browser body ko 8px kaa margin deta hai to hum margin 0 kar denge */
+body{
+    margin: 0px;
+}
+ul{
+    padding: 0px;
+}
+li{
+    list-style: none;
+    margin-top: 4px;
+    
+}

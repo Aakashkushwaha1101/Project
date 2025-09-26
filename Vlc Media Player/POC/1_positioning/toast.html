@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box{
+        width: 30rem;
+        height: 30rem;
+        background-color: purple;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+    }
+    .Button{
+        
+        color: black;
+        background-color: azure;
+    }
+    .toast{
+        width: 8rem;
+        height: 2rem;
+        color: black;
+        position: absolute;
+        top: 5px;
+        left: 380px;
+        display: none;
+    }
+</style>
+<body>
+    <div class="box">
+        <button class="Button">toast button</button>
+        <div class="toast">
+            <div >hello everyone</div>
+        </div>
+    </div>
+    <script>
+        //select element 
+        const toastButton=document.querySelector(".Button");
+        const Toast=document.querySelector(".toast");
+        toastButton.addEventListener("click" ,function (){
+            //show
+            Toast.style.display="block";
+
+            setTimeout(function (){
+                //hide after 2sec
+                Toast.style.display="none";
+            },2000);
+        })
+    </script>
+</body>
+
+</html>
