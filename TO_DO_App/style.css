@@ -1,60 +1,125 @@
-h2{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding-top: 40px; /* heading top spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+}
+
+/* Main heading */
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 25px;
     text-align: center;
-    font-size: 35px
-    ;
-    color: rgb(241, 147, 5);
+    font-weight: 600;
 }
-h3{
-    text-align: center;
-    color:rgb(81, 9, 226) ;
-    
+
+/* Main card */
+.todo {
+    width: 520px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
-button{
-    border-top-left-radius: 2px;
-    border: 2px;
-    block-size: 25px;
-    color: black;
-    background-color: aquamarine;
-    
+
+/* Input area */
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
-input{
-    border: 2px solid aquamarine;
-    block-size: 20px;
+
+/* TaskBar heading */
+h3 {
+    text-align: left;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
-.todo{
-    width: 500px;
-    border: 2px solid rgb(81, 9, 226);
-    height: 600px;
-    /* margin-left: 500px; */
-    margin: auto;
+
+/* Inputs */
+input {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.2s ease;
 }
-.input-area{
-    /* margin: auto; */
-    margin-top: 20px;
-    width: 400px;
-    height: 50px;
-    margin-left: 120px;
-    
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102,126,234,0.4);
 }
-.list{
-    border: 2px solid rgb(0, 163, 155);
-    width: 300px;
-    height: 400px;
-    margin: auto;
+
+/* Buttons */
+button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Task list */
+.list {
+    background: #f8f9ff;
+    border-radius: 10px;
+    padding: 15px;
+    height: 380px;
+    overflow-y: auto;
+}
+
+/* Task rows */
 .list div {
-    display: flex; /* Make the li a flex container */
-    justify-content: space-between; /*  This spreads out the content (li text and button) evenly  */
-    align-items: center; /* This centers the items vertically within the li */
-    list-style: none; /* Remove default list bullets, if desired */
-    margin-bottom: 5px; /* Add some spacing between list items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
-.inpt{
-    block-size: 18px;
-    margin-top: 5px;
+
+/* Date input */
+.inpt {
+    margin-top: 6px;
+    padding: 6px;
 }
-label{
-    margin-left: 0px;
-    margin-top: 5px;
-    font: bold;
+
+/* Label */
+label {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Scrollbar */
+.list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
 }
